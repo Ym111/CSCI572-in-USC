@@ -25,7 +25,7 @@ import edu.uci.ics.crawler4j.parser.ParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
 
 public class MyCrawler extends WebCrawler {
-    private final static Pattern FILTERS = Pattern.compile(".*(\\.(css" + "|mp3|zip|gz|rss|js|svg))$");
+    private final static Pattern FILTERS = Pattern.compile(".*(\\.(css" + "|mp3|zip|gz|rss|js))$");
 
     // private final static Pattern DOCUM_PATTERN = Pattern.compile(".*(\\.(
     // |pdf|html|HTML|doc" + "|bmp|gif|jpe?g|png|tiff?))$");

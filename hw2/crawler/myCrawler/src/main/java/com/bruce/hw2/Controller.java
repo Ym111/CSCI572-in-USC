@@ -16,20 +16,21 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 
 public class Controller {
     public static void main(String[] args) throws Exception {
-        long startTime=System.currentTimeMillis();   //获取开始时间  
+        long startTime = System.currentTimeMillis(); // 获取开始时间
         String crawlStorageFolder = "./data/crawl";
         int numberOfCrawlers = 8;
         CrawlConfig config = new CrawlConfig();
-        //Configure the Crawler
+        // Configure the Crawler
         config.setCrawlStorageFolder(crawlStorageFolder);
-        
+
         config.setMaxDepthOfCrawling(16);
-        config.setMaxPagesToFetch(2000);
-        config.setPolitenessDelay(600);
+        config.setMaxPagesToFetch(20000);
+        config.setPolitenessDelay(200);
         config.setUserAgentString("collect date for project");
         config.setIncludeBinaryContentInCrawling(true);
-        
-         /* Instantiate the controller for this crawl.
+
+        /*
+         * Instantiate the controller for this crawl.
          */
         PageFetcher pageFetcher = new PageFetcher(config);
         RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
@@ -40,23 +41,23 @@ public class Controller {
          * are fetched and then the crawler starts following links which are found in
          * these pages
          */
-        //controller.addSeed("https://www.latimes.com/projects/california-oil-well-drilling-idle-cleanup/assets/meta/favicon-16x16.5f113307.png");
+        // controller.addSeed("https://www.latimes.com/projects/california-oil-well-drilling-idle-cleanup/assets/meta/favicon-16x16.5f113307.png");
         controller.addSeed("https://www.latimes.com");
-        
-        //controller.addSeed("https://www.latimes.com/projects/la-me-sea-level-rise-california-coast/static/img/interactive.gif");
+
+        // controller.addSeed("https://www.latimes.com/projects/la-me-sea-level-rise-california-coast/static/img/interactive.gif");
 
         /*
          * Start the crawl. This is a blocking operation, meaning that your code will
          * reach the line after this only when crawling is finished.
          */
         controller.start(MyCrawler.class, numberOfCrawlers);
-        //open docment
+        // open docment
 
-        final String[] FILE_HEADER1 = {"URL","HTTP Status"};
+        final String[] FILE_HEADER1 = { "URL", "HTTP Status" };
         final String FILE_NAME1 = "fetch_LATIMES.csv";
-        final String[] FILE_HEADER2 = {"URL","HTTP Status"};
+        final String[] FILE_HEADER2 = { "URL", "HTTP Status" };
         final String FILE_NAME2 = "vist_LATIMES.csv";
-        final String[] FILE_HEADER3 = {"URL","HTTP Status"};
+        final String[] FILE_HEADER3 = { "URL", "HTTP Status" };
         final String FILE_NAME3 = "urls_LATIMES.csv";
         FileWriter out1 = new FileWriter(FILE_NAME1);
         CSVFormat format1 = CSVFormat.DEFAULT.withHeader(FILE_HEADER1).withSkipHeaderRecord();
@@ -67,34 +68,34 @@ public class Controller {
         FileWriter out3 = new FileWriter(FILE_NAME3);
         CSVFormat format3 = CSVFormat.DEFAULT.withHeader(FILE_HEADER3).withSkipHeaderRecord();
         CSVPrinter printer3 = new CSVPrinter(out3, format3);
-        
-        //handle data
+
+        // handle data
         List<Object> crawlersLocalData = controller.getCrawlersLocalData();
-        
-        List<List<String>> recordList = new ArrayList<>(); 
+
+        List<List<String>> recordList = new ArrayList<>();
         for (Object localData : crawlersLocalData) {
             CrawlStat stat = (CrawlStat) localData;
             recordList = stat.getRecord1();
-            for(int i =0;i<recordList.size();i++){
+            for (int i = 0; i < recordList.size(); i++) {
                 printer1.printRecord(recordList.get(i));
             }
             printer1.flush();
             recordList = stat.getRecord2();
-            for(int i =0;i<recordList.size();i++){
+            for (int i = 0; i < recordList.size(); i++) {
                 printer2.printRecord(recordList.get(i));
             }
             printer2.flush();
             recordList = stat.getRecord3();
-            for(int i =0;i<recordList.size();i++){
+            for (int i = 0; i < recordList.size(); i++) {
                 printer3.printRecord(recordList.get(i));
             }
             printer3.flush();
-        
+
         }
 
-        //flush and close the document
+        // flush and close the document
         try {
-            
+
             printer1.close();
             printer2.close();
             printer3.close();
@@ -103,9 +104,7 @@ public class Controller {
             e.printStackTrace();
         }
 
-
-
-        long endTime=System.currentTimeMillis(); //获取结束时间  
-        System.out.println("程序运行时间： "+(endTime-startTime)/60000+"mins");
+        long endTime = System.currentTimeMillis(); // 获取结束时间
+        System.out.println("程序运行时间： " + (endTime - startTime) / 60000 + "mins");
     }
 }
