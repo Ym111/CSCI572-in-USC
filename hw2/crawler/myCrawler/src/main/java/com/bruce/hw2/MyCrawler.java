@@ -77,6 +77,7 @@ public class MyCrawler extends WebCrawler {
     @Override
     public void visit(Page page) {
         String url = page.getWebURL().getURL();
+        if( url.indexOf(".js") != -1) return;
         // System.out.println("URL: " + url);
         if (page.getParseData() instanceof HtmlParseData) { // html
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();

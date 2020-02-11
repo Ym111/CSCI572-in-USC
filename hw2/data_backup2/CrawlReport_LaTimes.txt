@@ -1,0 +1,42 @@
+Name: Yiming Chen
+USC ID: 9600260082
+News site crawled: latimes.com
+
+Fetch Statistics
+================
+# fetches attempted:19,997
+# fetches succeeded:19,613
+# fetches failed or aborted: 384
+
+Outgoing URLs: visit(2563483) urls(1584147)
+==============
+Total URLs extracted:1,048,575
+# unique URLs extracted:263,250
+# unique URLs within News Site:198,289
+# unique URLs outside News Site:64,961
+
+Status Codes:fetch(19997)
+=============
+200 OK:19,689
+301 Moved Permanently:205
+302 :10
+403 Forbidden:34
+404 Not Found:57
+504 :2
+
+File Sizes:visit(19613)
+===========
+< 1KB:25
+1KB ~ <10KB:1052
+10KB ~ <100KB:10827
+100KB ~ <1MB:109
+>= 1MB:0
+
+Content Types:visit(19613)
+==============
+text/html:19,381
+image/gif:1
+image/jpeg:60
+image/png:150
+image/svg+xml:19
+image/vnd.microsoft.icon:1
