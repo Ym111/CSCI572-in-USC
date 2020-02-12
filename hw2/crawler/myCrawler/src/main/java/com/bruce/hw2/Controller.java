@@ -55,9 +55,9 @@ public class Controller {
 
         final String[] FILE_HEADER1 = { "URL", "HTTP Status" };
         final String FILE_NAME1 = "fetch_LATIMES.csv";
-        final String[] FILE_HEADER2 = { "URL", "HTTP Status" };
+        final String[] FILE_HEADER2 = { "URL", "Size","# of outlinks","Content-type" };
         final String FILE_NAME2 = "vist_LATIMES.csv";
-        final String[] FILE_HEADER3 = { "URL", "HTTP Status" };
+        final String[] FILE_HEADER3 = { "URL", "Reside in website or Not" };
         final String FILE_NAME3 = "urls_LATIMES.csv";
         FileWriter out1 = new FileWriter(FILE_NAME1);
         CSVFormat format1 = CSVFormat.DEFAULT.withHeader(FILE_HEADER1).withSkipHeaderRecord();
