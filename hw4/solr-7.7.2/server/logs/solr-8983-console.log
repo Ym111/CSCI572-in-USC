@@ -4,16 +4,16 @@ Java HotSpot(TM) 64-Bit Server VM warning: Ignoring option UseCMSInitiatingOccup
 Java HotSpot(TM) 64-Bit Server VM warning: Ignoring option CMSInitiatingOccupancyFraction; support was removed in 14.0
 Java HotSpot(TM) 64-Bit Server VM warning: Ignoring option CMSMaxAbortablePrecleanTime; support was removed in 14.0
 Java HotSpot(TM) 64-Bit Server VM warning: Ignoring option CMSParallelRemarkEnabled; support was removed in 14.0
-2020-04-17 22:15:50.069 INFO  (main) [   ] o.e.j.u.log Logging initialized @1259ms to org.eclipse.jetty.util.log.Slf4jLog
-2020-04-17 22:15:50.255 WARN  (main) [   ] o.e.j.s.AbstractConnector Ignoring deprecated socket close linger time
-2020-04-17 22:15:50.284 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.14.v20181114; built: 2018-11-14T21:20:31.478Z; git: c4550056e785fb5665914545889f21dc136ad9e6; jvm 14+36-1461
-2020-04-17 22:15:50.312 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///Users/Bruce/Desktop/20spring/572/CSCI572-in-USC/hw4/solr-7.7.2/server/contexts/] at interval 0
-2020-04-17 22:15:50.719 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
-2020-04-17 22:15:50.730 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
-2020-04-17 22:15:50.731 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
-2020-04-17 22:15:50.733 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
-2020-04-17 22:15:50.875 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2020-04-17 22:15:50.885 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.7.2
-2020-04-17 22:15:50.885 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2020-04-17 22:15:50.886 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/Bruce/Desktop/20spring/572/CSCI572-in-USC/hw4/solr-7.7.2
-2020-04-17 22:15:50.887 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-04-17T22:15:50.887029Z
+2020-05-06 08:29:34.501 INFO  (main) [   ] o.e.j.u.log Logging initialized @1496ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-05-06 08:29:34.679 WARN  (main) [   ] o.e.j.s.AbstractConnector Ignoring deprecated socket close linger time
+2020-05-06 08:29:34.715 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.14.v20181114; built: 2018-11-14T21:20:31.478Z; git: c4550056e785fb5665914545889f21dc136ad9e6; jvm 14+36-1461
+2020-05-06 08:29:34.742 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///Users/Bruce/Desktop/20spring/572/CSCI572-in-USC/hw4/solr-7.7.2/server/contexts/] at interval 0
+2020-05-06 08:29:35.177 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-05-06 08:29:35.191 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-05-06 08:29:35.191 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-05-06 08:29:35.195 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2020-05-06 08:29:35.305 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-05-06 08:29:35.313 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.7.2
+2020-05-06 08:29:35.313 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2020-05-06 08:29:35.313 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/Bruce/Desktop/20spring/572/CSCI572-in-USC/hw4/solr-7.7.2
+2020-05-06 08:29:35.314 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-05-06T08:29:35.314289Z

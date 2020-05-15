@@ -191,9 +191,9 @@ if ($results)
 		if(e.keyCode == 37 || e.keyCode == 38||e.keyCode == 39||e.keyCode == 40){ // 
 			return;
 		}
-		term = str.split(" ")[str.split(" ").length-1];
+		term = str.replace(" ","");
 		// search it 
-		preterm = str.replace(term,"");
+		//preterm = str.replace(term,"");
 		console.log(term);
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
@@ -210,7 +210,7 @@ if ($results)
 			
             var suggestion_list = [];
             for(var i = 0;i<suggestions.length;++i){
-              suggestion_list.push(preterm + suggestions[i]["term"]);
+              suggestion_list.push(suggestions[i]["term"]);
             }
 			console.log(suggestion_list);
             $("#q").autocomplete({
